@@ -36,7 +36,7 @@ def Baseline(iteration):
 def Reduced(iteration):
     model = stochpy.SSA()
     model.Model(model_file='MRSA_Colonization.psc', dir=workingdir)
-    model.ChangeParameter('rho',(4.154*0.817))
+    model.ChangeParameter('rho',(4.154*0.823))
     model.Endtime(end_time)
     model.DoStochSim()
     model.GetRegularGrid(n_samples=end_time)
@@ -50,7 +50,7 @@ def Reduced(iteration):
 def Efficient(iteration):
     model = stochpy.SSA()
     model.Model(model_file='MRSA_Colonization.psc', dir=workingdir)
-    model.ChangeParameter('tau',(2.389*0.817))
+    model.ChangeParameter('tau',(2.389*0.823))
     model.Endtime(end_time)
     model.DoStochSim()
     model.GetRegularGrid(n_samples=end_time)
@@ -65,7 +65,7 @@ def Efficient(iteration):
 def RedHH(iteration):
     model = stochpy.SSA()
     model.Model(model_file='MRSA_Colonization.psc', dir=workingdir)
-    model.ChangeParameter('rho',(4.154*0.817))
+    model.ChangeParameter('rho',(4.154*0.823))
     model.ChangeParameter('iota',(6.520))
     model.Endtime(end_time)
     model.DoStochSim()
@@ -78,7 +78,7 @@ def EffHH(iteration):
     model = stochpy.SSA()
     model.Model(model_file='MRSA_Colonization.psc', dir=workingdir)
     model.ChangeParameter('iota',6.520)
-    model.ChangeParameter('tau',(2.389*0.817))
+    model.ChangeParameter('tau',(2.389*0.823))
     model.Endtime(end_time)
     model.DoStochSim()
     model.GetRegularGrid(n_samples=end_time)

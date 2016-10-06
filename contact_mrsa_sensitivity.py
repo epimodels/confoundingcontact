@@ -47,7 +47,7 @@ def Baseline(iteration):
 def Reduced(iteration):
     model = stochpy.SSA()
     model.Model(model_file='MRSA_Colonization.psc', dir=workingdir)
-    model.ChangeParameter('rho',random.uniform(3.054436,3.7332))
+    model.ChangeParameter('rho',random.uniform(3.076868,3.760616))
     model.ChangeParameter('sigma',random.uniform(0.0486,0.0594))
     model.ChangeParameter('psi',random.uniform(0.0838287,0.1024573))
     model.ChangeParameter('theta',random.uniform(0.008541,0.010439))
@@ -75,7 +75,7 @@ def Efficient(iteration):
     model.ChangeParameter('nu_C',colonized_admits)
     model.ChangeParameter('nu_U',1-colonized_admits)
     model.ChangeParameter('iota',random.uniform(5.166,6.314))
-    model.ChangeParameter('tau',random.uniform(2.125017,2.597243))
+    model.ChangeParameter('tau',random.uniform(1.769532,2.162762))
     model.Endtime(end_time)
     model.DoStochSim()
     model.GetRegularGrid(n_samples=end_time)
