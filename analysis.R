@@ -4,7 +4,6 @@
 
 ## Import Packages and Import Data
 library(vioplot)
-library(ggplot2)
 
 mrsa <- as.data.frame(read.csv("ContactChangeOutcomes_mrsa.csv"))
 
